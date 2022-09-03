@@ -1,6 +1,6 @@
 /* global loadPyodide, importScripts */
 
-importScripts('https://cdn.jsdelivr.net/pyodide/v0.21.1/full/pyodide.js');
+importScripts('https://cdn.jsdelivr.net/pyodide/v0.21.2/full/pyodide.js');
 
 async function loadPyodideAndRemember() {
 	self.pyodide = await loadPyodide();
