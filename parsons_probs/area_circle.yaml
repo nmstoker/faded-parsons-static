@@ -20,7 +20,7 @@ problem_description: |
 
 code_lines: |
   import math #0given
-  def area_circle(radius, decimals=2): #0given
-  a = math.pi * (radius ** 2)
-  return f"Circle area is {a:.{decimals}f}"
+  def area_circle(radius, decimals!BLANK): #0given
+  a = math.!BLANK * (radius ** 2)
+  return f"Circle area is {a:.{!BLANK}f}"
 test_fn: area_circle 
