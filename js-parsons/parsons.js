@@ -427,7 +427,7 @@
 					"style = 'width: " +
 					(replaceText.length + 3) * 8 +
 					"px'" +
-					"onkeypress=\"this.style.width = ((this.value.length + 3) * 8) + 'px';\"'/>"
+					"onkeyup=\"this.style.width = ((this.value.length + 3) * 8) + 'px';\"'/>"
 				);
 			});
 		}

@@ -145,7 +145,7 @@ li.correctPosition, .testcase.pass {
     padding: 5px;
     font-size: 13.3333px;
     font-family: monospace;
-    background-color: #EFEFEF;
+    background-color: white;
 }
 
 .text-box:focus{

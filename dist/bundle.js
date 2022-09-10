@@ -3957,15 +3957,23 @@ function prepareCode(submittedCode, codeHeader) {
 	let lines = codeHeader.split('\n');
 	const startLine = countDocstringLines(lines);
 	const codeLines = submittedCode.split('\n');
-	if (!(codeLines[0].includes('def') || codeLines[0].includes('class'))) {
+	if (!(codeLines[0].includes('def') || codeLines[0].includes('class') || codeLines[0].includes('import'))) {
 		return {
 			status: 'fail',
 			header: 'Error running tests',
-			details: 'First code line must be `def` or `class` declaration',
+			details: 'First code line must be `def`, `class` or `import` declaration',
 		};
 	}
 	// Remove function def or class declaration statement, its relied on elsewhere
-	codeLines.shift();
+	// (NS) TODO: clean up this ugly work-around
+	if (codeLines[0].includes('def') || codeLines[0].includes('class') || codeLines[0].includes('import')) {
+		codeLines.shift();
+	}
+	// second time around it's again the first line we want to look at...
+	if (codeLines[0].includes('def') || codeLines[0].includes('class') || codeLines[0].includes('import')) {
+		codeLines.shift();
+	}
+	//console.log("Remaining lines", codeLines)
 
 	let line = findNextUnindentedLine(codeLines, 0);
 	if (line != codeLines.length) {
@@ -3997,6 +4005,8 @@ function prepareCode(submittedCode, codeHeader) {
 	finalCode.push('import doctest');
 	finalCode.push('doctest.testmod(verbose=True)');
 	finalCode = finalCode.join('\n');
+
+	console.log("Final Code", finalCode);
 
 	return {
 		status: 'success',

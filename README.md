@@ -5,7 +5,7 @@ It uses Pyodide for executing Python doctests and localStorage for storing user 
 
 Check it out here:
 
-https://pamelafox.github.io/faded-parsons-static/index.html
+https://about.nmstoker.com/faded-parsons-static/
 
 ## Running the website
 
