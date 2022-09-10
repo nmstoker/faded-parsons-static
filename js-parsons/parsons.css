@@ -1,4 +1,9 @@
-/** Stylesheet for the puzzles */
+/** Styling for pages overall **/
+body {
+    background-color: #ebebeb;
+}
+
+/** Styling for the puzzles **/
 .line-number {
     float: right !important;
     font-size: 80%;
