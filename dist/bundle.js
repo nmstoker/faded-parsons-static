@@ -4151,7 +4151,7 @@ class TestResultsElement extends s {
 		return $`<div class="testcase ${this.status}">
 						<span class="msg">${this.header}</span>
 						</div>
-						<pre><code>${this.details}</code></pre></div>
+						<div class="output">${this.details}</div></div>
 					</div>`;
 	}
 }
