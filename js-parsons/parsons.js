@@ -425,9 +425,9 @@
 					replaceText +
 					'" ' +
 					"style = 'width: " +
-					(replaceText.length + 3) * 8 +
+					(((replaceText.length + 2) * 8 ) + 0) +
 					"px'" +
-					"onkeyup=\"this.style.width = ((this.value.length + 3) * 8) + 'px';\"'/>"
+					"onkeyup=\"this.style.width = (((this.value.length + 2) * 8) + 0) + 'px';\"'/>"
 				);
 			});
 		}

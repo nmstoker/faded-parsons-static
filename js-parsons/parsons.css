@@ -152,9 +152,12 @@ li.correctPosition, .testcase.pass {
     width:80px;
     min-width:80px;
     padding: 5px;
+    padding-left: 8px;
     font-size: 13.3333px;
     font-family: monospace;
     background-color: white;
+    box-shadow:inset 1px 2px 5px rgba(220,220,220,0.6);
+    text-shadow: 1px 2px 5px rgba(190,190,190,0.6);
 }
 
 .text-box:focus{
