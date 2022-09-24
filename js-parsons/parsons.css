@@ -141,6 +141,11 @@ li.correctPosition, .testcase.pass {
 
 }
 
+.description
+{
+    white-space: pre;
+}
+
 /** For styling the toggleable elements */
 .jsparson-toggle {
     padding: 0 15px;
